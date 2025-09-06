@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Punnam Hemanth</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #333;
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+      border-bottom-left-radius: 50% 15%;
+      border-bottom-right-radius: 50% 15%;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .hero a {
+      background: #facc15;
+      color: #333;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .hero a:hover { background: #fde047; }
+
+    /* Navigation */
+    nav {
+      background: #4f46e5;
+      padding: 0.7rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #facc15; }
+
+    /* Sections */
+    section {
+      max-width: 950px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #4f46e5;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid #e0e7ff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* Timeline */
+    .timeline { border-left: 3px solid #4f46e5; margin-left: 20px; padding-left: 20px; }
+    .timeline-item { position: relative; margin-bottom: 2rem; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: #4f46e5;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px #4f46e5;
+    }
+    .timeline-item img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    /* Skills */
+    .skill { margin-bottom: 1rem; }
+    .skill span { font-weight: bold; }
+    .skill-bar {
+      background: #e0e7ff;
+      height: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+    .fill {
+      height: 100%;
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      width: 0;
+      border-radius: 10px;
+      animation: fillBar 2s forwards;
+    }
+    @keyframes fillBar { to { width: var(--width); } }
+
+    /* Cards */
+    .card {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 25px rgba(79,70,229,0.4);
+    }
+
+    /* Contact */
+    .contact-icons a {
+      display: inline-block;
+      margin: 0.5rem;
+      font-size: 1.1rem;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      transition: 0.3s;
+      background: #e0e7ff;
+      color: #3730a3;
+      text-decoration: none;
+    }
+    .contact-icons a:hover {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      padding: 1.2rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Punnam Hemanth</h1>
+    <p>CSE Student (AIML Specialization) | Future AI/ML Engineer</p>
+    <a href="#projects">View My Work</a>
+  </section>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#internships">Internships</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#startup">Startup</a>
+    <a href="#hackathons">Hackathons</a>
+    <a href="#simulations">Simulations</a>
+    <a href="#activities">Activities</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Science and Engineering student specializing in 
+      Artificial Intelligence and Machine Learning at SR University. 
+      Passionate about AI, Generative AI, and building real-world solutions 
+      using cutting-edge technologies.  
+      Beyond academics, I actively participate in hackathons, clubs, and 
+      innovative projects that challenge my creativity and problem-solving skills.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="SRU"/>
+        <strong>SR University</strong> – B.Tech CSE (AIML)  
+        <p>Expected Graduation: 2027</p>
+      </div>
+      <div class="timeline-item">
+        <img src="https://img.icons8.com/color/48/school.png" alt="Alphores"/>
+        <strong>Alphores Junior College</strong> – Intermediate  
+        <p>Completed: 2022 | Percentage: 94%</p>
+      </div>
+      <div class="timeline-item">
+        <img src="https://img.icons8.com/color/48/school-building.png" alt="BVB"/>
+        <strong>Bharati Vidya Bhavan</strong> – Secondary School  
+        <p>Completed: 2020 | GPA: 10/10</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internships -->
+  <section id="internships">
+    <h2>Internships</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="AI"/>
+        <strong>AICTE Virtual Internship</strong> – AIML  
+        <p>Remote | 2024</p>
+      </div>
+      <div class="timeline-item">
+        <img src="https://img.icons8.com/color/48/web-design.png" alt="Web"/>
+        <strong>AICTE Virtual Internship</strong> – Web Full Stack Development  
+        <p>Remote | 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill"><span>Python</span>
+      <div class="skill-bar"><div class="fill" style="--width:90%"></div></div>
+    </div>
+    <div class="skill"><span>Machine Learning</span>
+      <div class="skill-bar"><div class="fill" style="--width:85%"></div></div>
+    </div>
+    <div class="skill"><span>Deep Learning</span>
+      <div class="skill-bar"><div class="fill" style="--width:75%"></div></div>
+    </div>
+    <div class="skill"><span>Generative AI</span>
+      <div class="skill-bar"><div class="fill" style="--width:80%"></div></div>
+    </div>
+    <div class="skill"><span>HTML, CSS, JS</span>
+      <div class="skill-bar"><div class="fill" style="--width:85%"></div></div>
+    </div>
+    <div class="skill"><span>PHP & SQL</span>
+      <div class="skill-bar"><div class="fill" style="--width:70%"></div></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card"><strong>AI Chatbot:</strong> Conversational bot with Python + NLP. <a href="#">GitHub</a></div>
+    <div class="card"><strong>Portfolio Website:</strong> Personal showcase site. <a href="#">GitHub</a></div>
+    <div class="card"><strong>ML Model:</strong> Predictive ML algorithm project. <a href="#">GitHub</a></div>
+  </section>
+
+  <!-- Startup -->
+  <section id="startup">
+    <h2>Startup Idea</h2>
+    <div class="card">
+      <strong>Digital Restaurant Table</strong>
+      <p>
+        Developed an innovative dining concept with touchscreen ordering, AI-based food 
+        recommendations, and integrated payment system to enhance customer experience.
+      </p>
+    </div>
+  </section>
+
+  <!-- Hackathons -->
+  <section id="hackathons">
+    <h2>Hackathons</h2>
+    <div class="card">
+      Participated in <strong>4 Hackathons</strong> (24hr) at SR University, focusing on rapid prototyping, AI/ML solutions, teamwork, and pitching.
+    </div>
+  </section>
+
+  <!-- Simulations -->
+  <section id="simulations">
+    <h2>Simulations / Virtual Experience</h2>
+    <ul>
+      <li><strong>Deloitte Data Analytics Job Simulation</strong></li>
+      <li><strong>Tata Cybersecurity Analyst Simulation</strong></li>
+      <li><strong>Generative AI Job Simulation</strong></li>
+    </ul>
+  </section>
+
+  <!-- Activities -->
+  <section id="activities">
+    <h2>Clubs & Activities</h2>
+    <ul>
+      <li>Fashion Club</li>
+      <li>Greenery Club</li>
+      <li>Literature Club</li>
+      <li>Esports Club</li>
+    </ul>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+      <li>AICTE Virtual Internship – AIML</li>
+      <li>AICTE Virtual Internship – Web Full Stack</li>
+      <li>Deloitte Simulation Certificate</li>
+      <li>Tata Data Analytics Certificate</li>
+      <li>Generative AI Simulation Certificate</li>
+      <li>Saylor – Computer Communications & Networks</li>
+      <li>Python for Everybody – Coursera</li>
+      <li>Machine Learning Basics – Udemy</li>
+      <li>Generative AI Workshop – SR University</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="mailto:punnamhemanth6@gmail.com">📧 Email</a>
+      <a href="https://www.linkedin.com/in/punnamhemanth">🔗 LinkedIn</a>
+      <a href="https://github.com/2303A52259">🐙 GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Punnam Hemanth | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
